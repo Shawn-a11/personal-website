@@ -50,11 +50,14 @@ npm start
 │   ├── Sidebar.tsx       # Navigation sidebar
 │   ├── ProjectCard.tsx   # Research project cards
 │   └── PublicationCard.tsx
-└── public/           # Static assets (add avatar.jpg here)
+└── public/           # avatar.png, Resume.pdf
 ```
 
 ## Customization
 
-- **Avatar**: Add `public/avatar.jpg` for your profile photo
+- **Avatar**: `public/avatar.png` — your profile photo (falls back to initials if missing)
+- **Resume**: Add `public/Resume.pdf` for the download button
 - **Social links**: Edit `components/Sidebar.tsx` (LinkedIn, GitHub, X)
-- **Content**: Update `app/page.tsx` with your latest projects and publications
+- **Projects**: Add `href` to `ProjectCard` in `app/page.tsx` for GitHub repo links
+- **Publications**: Add `href` to `PublicationCard` when paper links (DOI/proceedings) are available
+- **Sharing**: Update video/blog links in the Publications section

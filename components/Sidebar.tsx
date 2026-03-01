@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Home,
   FolderKanban,
@@ -24,7 +25,7 @@ const navItems = [
 
 const socialLinks = [
   { href: 'https://linkedin.com/in/shuwen8681/', icon: Linkedin, label: 'LinkedIn' },
-  { href: 'https://github.com/gesuwen', icon: Github, label: 'GitHub' },
+  { href: 'https://github.com/Shawn-a11', icon: Github, label: 'GitHub' },
   { href: 'mailto:shuwen8681@gmail.com', icon: Mail, label: 'Email' },
   { href: 'https://x.com', icon: Twitter, label: 'X' },
 ]
@@ -61,12 +62,23 @@ export default function Sidebar() {
       >
         {/* Profile */}
         <div className="flex flex-col items-center border-b border-slate-200 pb-6 dark:border-slate-700">
-          <div className="flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-accent to-blue-600 text-3xl font-bold text-white shadow-lg">
-            SG
+          <div className="relative h-28 w-28 overflow-hidden rounded-full shadow-lg">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-accent to-blue-600 text-3xl font-bold text-white">
+              SG
+            </div>
+            <Image
+              src="/avatar.png"
+              alt="Shuwen Ge"
+              fill
+              className="object-cover"
+              sizes="112px"
+              priority
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+            />
           </div>
           <h1 className="mt-4 text-xl font-bold tracking-tight">Shuwen Ge</h1>
           <p className="mt-1 text-center text-sm text-slate-600 dark:text-slate-400">
-            AI Researcher & Creator · Building & Sharing
+            AI Creator · Sharing AI Knowledge & Works
           </p>
 
           {/* Social links */}
