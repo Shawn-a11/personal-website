@@ -78,7 +78,7 @@ export default function Home() {
             <PublicationCard
               title="Supervised vs SSL for Fin Whale Vocalization Detection"
               venue="NeurIPS 2025 Workshop"
-              description="First SSL study for fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. SSL outperforms supervised in low-label and low-SNR regimes."
+              description="First SSL paper on fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. SSL outperforms supervised in low-label and low-SNR regimes."
               href="https://hal.science/hal-05493363v1/file/CHAREYRE_NeurIPS_2025_SSL_for_finwhale_paper.pdf"
             />
             <PublicationCard
