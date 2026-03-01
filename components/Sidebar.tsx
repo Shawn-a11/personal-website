@@ -13,8 +13,11 @@ import {
   Linkedin,
   Github,
   Mail,
-  Twitter,
+  GraduationCap,
+  Palette,
+  Monitor,
 } from 'lucide-react'
+import { useTheme } from './ThemeProvider'
 
 const navItems = [
   { href: '#about', label: 'Home', icon: Home },
@@ -27,11 +30,12 @@ const socialLinks = [
   { href: 'https://linkedin.com/in/shuwen8681/', icon: Linkedin, label: 'LinkedIn' },
   { href: 'https://github.com/Shawn-a11', icon: Github, label: 'GitHub' },
   { href: 'mailto:shuwen8681@gmail.com', icon: Mail, label: 'Email' },
-  { href: 'https://x.com', icon: Twitter, label: 'X' },
+  { href: 'https://scholar.google.com', icon: GraduationCap, label: 'Google Scholar' },
 ]
 
 export default function Sidebar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   return (
     <>
@@ -78,8 +82,36 @@ export default function Sidebar() {
           </div>
           <h1 className="mt-4 text-xl font-bold tracking-tight">Shuwen Ge</h1>
           <p className="mt-1 text-center text-sm text-slate-600 dark:text-slate-400">
-            AI Creator · Sharing AI Knowledge & Works
+            AI Researcher · Builder · NeurIPS 2025 · ACL ARR 2026
           </p>
+
+          {/* Theme toggle */}
+          <div className="mt-3 flex gap-1 rounded-lg bg-slate-100 p-1 dark:bg-slate-800">
+            <button
+              onClick={() => setTheme('tech')}
+              className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs transition ${
+                theme === 'tech'
+                  ? 'bg-accent text-white'
+                  : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+              }`}
+              title="深蓝科技风"
+            >
+              <Monitor size={14} />
+              Tech
+            </button>
+            <button
+              onClick={() => setTheme('academic')}
+              className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs transition ${
+                theme === 'academic'
+                  ? 'bg-accent text-white'
+                  : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+              }`}
+              title="极简黑白学术风"
+            >
+              <Palette size={14} />
+              Academic
+            </button>
+          </div>
 
           {/* Social links */}
           <div className="mt-4 flex gap-3">

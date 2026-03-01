@@ -55,9 +55,8 @@ npm start
 
 ## Customization
 
+- **Theme**: Toggle between Tech (深蓝科技风) and Academic (极简黑白学术风) in the sidebar
 - **Avatar**: `public/avatar.png` — your profile photo (falls back to initials if missing)
-- **Resume**: Add `public/Resume.pdf` for the download button
-- **Social links**: Edit `components/Sidebar.tsx` (LinkedIn, GitHub, X)
-- **Projects**: Add `href` to `ProjectCard` in `app/page.tsx` for GitHub repo links
-- **Publications**: Add `href` to `PublicationCard` when paper links (DOI/proceedings) are available
-- **Sharing**: Update video/blog links in the Publications section
+- **Resume**: `public/Resume.pdf` — download button in Contact section
+- **Social links**: Edit `components/Sidebar.tsx` — add your Google Scholar URL when profile is ready
+- **Domain**: In Vercel → Settings → Domains, add `shuwenge.vercel.app` for a cleaner URL

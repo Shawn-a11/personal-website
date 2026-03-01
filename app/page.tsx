@@ -2,11 +2,7 @@ import Sidebar from '@/components/Sidebar'
 import ProjectCard from '@/components/ProjectCard'
 import PublicationCard from '@/components/PublicationCard'
 import {
-  Bot,
-  Palette,
-  BarChart3,
   MessageCircle,
-  Zap,
   Video,
   BookOpen,
 } from 'lucide-react'
@@ -42,7 +38,6 @@ export default function Home() {
               </li>
               <li className="flex gap-2">
                 <span className="font-medium text-slate-900 dark:text-slate-100">Builder & Sharer:</span>
-                <Zap className="inline h-4 w-4 shrink-0 text-amber-500" />
                 Self-motivated researcher who builds complete frameworks from scratch and shares knowledge through publications and open-source contributions
               </li>
             </ul>
@@ -58,19 +53,17 @@ export default function Home() {
             <ProjectCard
               title="Fin Whale Vocalization Detection"
               description="First study applying Self-Supervised Learning (SSL) to fin whale detection. Built complete supervised baseline with lightweight Transformer encoder, data pipeline, and ablation studies across normalization schemes."
-              icon={Bot}
               highlight="NeurIPS 2025 Workshop · AUROC 0.914"
             />
             <ProjectCard
-              title="Semantic Alignment via DPO"
+              title="Sem-DPO: Semantic Alignment via DPO"
               description="Mitigating semantic misalignment in text-to-image models via Direct Preference Optimization. Achieved 8–12% higher CLIP scores and 95.8% human preference in evaluation (n=57)."
-              icon={Palette}
-              highlight="ACL ARR 2026 Submission"
+              highlight="ACL ARR 2026 · arXiv"
+              href="https://arxiv.org/pdf/2507.20133"
             />
             <ProjectCard
               title="Open-Unmix Audio Separation"
               description="Reproduced and enhanced Open-Unmix with XLSTM, SLSTM, MLSTM. Deployed OpenJMLA and Audiocaps for interactive separation. Built Python scripts for FID, KLD, FAD metrics."
-              icon={BarChart3}
               highlight="University of Rochester"
             />
           </div>
@@ -89,9 +82,10 @@ export default function Home() {
                 description="Co-authored first SSL study for fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. Extended with wav2vec 2.0 and data2vec."
               />
               <PublicationCard
-                title="Mitigating Semantic Misalignment via Direct Preference Optimization"
+                title="Sem-DPO: Mitigating Semantic Inconsistency in Preference Optimization for Prompt Engineering"
                 venue="ACL Rolling Review (ARR), Jan 2026"
                 description="DPO-based approach for semantic faithfulness. Superior CLIP similarity and human preference across three benchmarks. Co-authored with University of Minnesota team."
+                href="https://arxiv.org/pdf/2507.20133"
               />
             </div>
             <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">

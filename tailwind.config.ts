@@ -13,9 +13,9 @@ const config: Config = {
       },
       colors: {
         accent: {
-          DEFAULT: '#2563eb',
-          hover: '#1d4ed8',
-          muted: '#93c5fd',
+          DEFAULT: 'var(--accent)',
+          hover: 'var(--accent-hover)',
+          muted: 'var(--accent-muted)',
         },
       },
     },
