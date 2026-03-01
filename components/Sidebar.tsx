@@ -104,32 +104,6 @@ export default function Sidebar() {
 
         {/* Navigation */}
         <nav className="mt-6 flex flex-col gap-1">
-          <div className="mb-3 flex justify-end">
-            <div className="flex gap-0.5 rounded-lg bg-slate-100 p-0.5 dark:bg-slate-800">
-              <button
-                onClick={() => setTheme('light')}
-                className={`rounded-md p-1.5 transition ${
-                  theme === 'light'
-                    ? 'bg-accent text-white'
-                    : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
-                }`}
-                title="Day"
-              >
-                <Sun size={16} />
-              </button>
-              <button
-                onClick={() => setTheme('dark')}
-                className={`rounded-md p-1.5 transition ${
-                  theme === 'dark'
-                    ? 'bg-accent text-white'
-                    : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
-                }`}
-                title="Night"
-              >
-                <Moon size={16} />
-              </button>
-            </div>
-          </div>
           {navItems.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
@@ -142,6 +116,34 @@ export default function Sidebar() {
             </Link>
           ))}
         </nav>
+
+        {/* Day / Night toggle — bottom-left */}
+        <div className="mt-auto pt-6">
+          <div className="flex gap-0.5 rounded-lg bg-slate-100 p-0.5 dark:bg-slate-800">
+            <button
+              onClick={() => setTheme('light')}
+              className={`rounded-md p-1.5 transition ${
+                theme === 'light'
+                  ? 'bg-accent text-white'
+                  : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
+              }`}
+              title="Day"
+            >
+              <Sun size={16} />
+            </button>
+            <button
+              onClick={() => setTheme('dark')}
+              className={`rounded-md p-1.5 transition ${
+                theme === 'dark'
+                  ? 'bg-accent text-white'
+                  : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
+              }`}
+              title="Night"
+            >
+              <Moon size={16} />
+            </button>
+          </div>
+        </div>
       </aside>
     </>
   )
