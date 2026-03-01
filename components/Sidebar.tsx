@@ -22,7 +22,7 @@ import { useTheme } from './ThemeProvider'
 const navItems = [
   { href: '#about', label: 'Home', icon: Home },
   { href: '#projects', label: 'Research Projects', icon: FolderKanban },
-  { href: '#publications', label: 'Publications & Sharing', icon: Share2 },
+  { href: '#publications', label: 'Publications', icon: Share2 },
   { href: '#contact', label: 'Contact', icon: MessageCircle },
 ]
 
@@ -82,7 +82,7 @@ export default function Sidebar() {
           </div>
           <h1 className="mt-4 text-xl font-bold tracking-tight">Shuwen Ge</h1>
           <p className="mt-1 text-center text-sm text-slate-600 dark:text-slate-400">
-            AI Researcher · Builder · NeurIPS 2025 · ACL ARR 2026
+            Junior AI Researcher
           </p>
 
           {/* Day / Night toggle */}

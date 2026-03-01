@@ -1,11 +1,7 @@
 import Sidebar from '@/components/Sidebar'
 import ProjectCard from '@/components/ProjectCard'
 import PublicationCard from '@/components/PublicationCard'
-import {
-  MessageCircle,
-  Video,
-  BookOpen,
-} from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -44,70 +40,53 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI Works / Research Projects */}
+        {/* AI Works — technical implementation focus */}
         <section id="projects" className="mt-16 scroll-mt-24">
           <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-slate-100">
             AI Works Collection
           </h2>
+          <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
+            Technical projects: frameworks, pipelines, and implementations.
+          </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
               title="Fin Whale Vocalization Detection"
-              description="First study applying Self-Supervised Learning (SSL) to fin whale detection. Built complete supervised baseline with lightweight Transformer encoder, data pipeline, and ablation studies across normalization schemes."
+              description="Built supervised baseline (Transformer encoder, STFT front-end) and SSL pipeline (CPC + SincNet + BRN). Ablation across LN, GN, BIN, RMSNorm. Data loading and preprocessing for Seglvik & Mediterranean datasets."
               highlight="NeurIPS 2025 Workshop"
+              href="https://hal.science/hal-05493363v1/file/CHAREYRE_NeurIPS_2025_SSL_for_finwhale_paper.pdf"
             />
             <ProjectCard
               title="Sem-DPO: Semantic Alignment via DPO"
-              description="Mitigating semantic misalignment in text-to-image models via Direct Preference Optimization. Achieved 8–12% higher CLIP scores and 95.8% human preference in evaluation (n=57)."
+              description="Implemented semantic-weighted DPO loss with offline embedding. Integrated CLIP encoder for cosine-distance weighting. Fine-tuned Qwen-1.5B and GPT-2 on DiffusionDB, Lexica, COCO."
               highlight="ACL ARR 2026 · arXiv"
               href="https://arxiv.org/pdf/2507.20133"
             />
             <ProjectCard
               title="Open-Unmix Audio Separation"
-              description="Reproduced and enhanced Open-Unmix with XLSTM, SLSTM, MLSTM. Deployed OpenJMLA and Audiocaps for interactive separation. Built Python scripts for FID, KLD, FAD metrics."
+              description="Reproduced Open-Unmix, enhanced with XLSTM/SLSTM/MLSTM. Deployed OpenJMLA and Audiocaps. Built Python scripts for FID, KLD, FAD. WSL + multi-GPU training pipeline."
               highlight="University of Rochester"
             />
           </div>
         </section>
 
-        {/* Publications & Sharing */}
+        {/* Publications */}
         <section id="publications" className="mt-16 scroll-mt-24">
           <h2 className="mb-6 text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Publications & Sharing
+            Publications
           </h2>
-          <div className="space-y-6">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <PublicationCard
-                title="Supervised vs SSL for Fin Whale Vocalization Detection"
-                venue="NeurIPS 2025 Workshop"
-                description="Co-authored first SSL study for fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. Extended with wav2vec 2.0 and data2vec."
-                href="https://hal.science/hal-05493363v1/file/CHAREYRE_NeurIPS_2025_SSL_for_finwhale_paper.pdf"
-              />
-              <PublicationCard
-                title="Sem-DPO: Mitigating Semantic Inconsistency in Preference Optimization for Prompt Engineering"
-                venue="ACL Rolling Review (ARR), Jan 2026"
-                description="DPO-based approach for semantic faithfulness. Superior CLIP similarity and human preference across three benchmarks. Co-authored with University of Minnesota team."
-                href="https://arxiv.org/pdf/2507.20133"
-              />
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-              <h3 className="mb-4 font-semibold text-slate-900 dark:text-slate-100">Sharing</h3>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="flex cursor-default items-center gap-3 rounded-lg border border-slate-200 p-3 opacity-75 dark:border-slate-700">
-                  <Video size={24} className="text-accent" />
-                  <div>
-                    <p className="font-medium">Video / B站 / YouTube</p>
-                    <p className="text-sm text-slate-500">Add your channel link in page.tsx</p>
-                  </div>
-                </div>
-                <div className="flex cursor-default items-center gap-3 rounded-lg border border-slate-200 p-3 opacity-75 dark:border-slate-700">
-                  <BookOpen size={24} className="text-accent" />
-                  <div>
-                    <p className="font-medium">Tech Blog / 掘金 / Medium</p>
-                    <p className="text-sm text-slate-500">Add your blog link in page.tsx</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <PublicationCard
+              title="Supervised vs SSL for Fin Whale Vocalization Detection"
+              venue="NeurIPS 2025 Workshop"
+              description="First SSL study for fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. SSL outperforms supervised in low-label and low-SNR regimes."
+              href="https://hal.science/hal-05493363v1/file/CHAREYRE_NeurIPS_2025_SSL_for_finwhale_paper.pdf"
+            />
+            <PublicationCard
+              title="Sem-DPO: Mitigating Semantic Inconsistency in Preference Optimization for Prompt Engineering"
+              venue="ACL Rolling Review (ARR), Jan 2026"
+              description="8–12% higher CLIP similarity and 95.8% human preference over DPO baseline. Semantically-weighted DPO for text-to-image prompt optimization."
+              href="https://arxiv.org/pdf/2507.20133"
+            />
           </div>
         </section>
 
@@ -141,7 +120,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-20 border-t border-slate-200 py-8 text-center text-sm text-slate-500 dark:border-slate-700 dark:text-slate-400">
-          © {new Date().getFullYear()} Shuwen Ge · Built with Next.js
+          © 2026 Shuwen Ge
         </footer>
       </main>
     </div>
