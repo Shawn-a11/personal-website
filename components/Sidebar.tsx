@@ -14,8 +14,8 @@ import {
   Github,
   Mail,
   GraduationCap,
-  Palette,
-  Monitor,
+  Sun,
+  Moon,
 } from 'lucide-react'
 import { useTheme } from './ThemeProvider'
 
@@ -30,7 +30,7 @@ const socialLinks = [
   { href: 'https://linkedin.com/in/shuwen8681/', icon: Linkedin, label: 'LinkedIn' },
   { href: 'https://github.com/Shawn-a11', icon: Github, label: 'GitHub' },
   { href: 'mailto:shuwen8681@gmail.com', icon: Mail, label: 'Email' },
-  { href: 'https://scholar.google.com', icon: GraduationCap, label: 'Google Scholar' },
+  { href: 'https://scholar.google.com/citations?user=01E6oJ0AAAAJ&hl=zh-CN', icon: GraduationCap, label: 'Google Scholar' },
 ]
 
 export default function Sidebar() {
@@ -85,31 +85,31 @@ export default function Sidebar() {
             AI Researcher · Builder · NeurIPS 2025 · ACL ARR 2026
           </p>
 
-          {/* Theme toggle */}
+          {/* Day / Night toggle */}
           <div className="mt-3 flex gap-1 rounded-lg bg-slate-100 p-1 dark:bg-slate-800">
             <button
-              onClick={() => setTheme('tech')}
+              onClick={() => setTheme('light')}
               className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs transition ${
-                theme === 'tech'
+                theme === 'light'
                   ? 'bg-accent text-white'
                   : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
               }`}
-              title="深蓝科技风"
+              title="白天"
             >
-              <Monitor size={14} />
-              Tech
+              <Sun size={14} />
+              Day
             </button>
             <button
-              onClick={() => setTheme('academic')}
+              onClick={() => setTheme('dark')}
               className={`flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs transition ${
-                theme === 'academic'
+                theme === 'dark'
                   ? 'bg-accent text-white'
                   : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
               }`}
-              title="极简黑白学术风"
+              title="黑夜"
             >
-              <Palette size={14} />
-              Academic
+              <Moon size={14} />
+              Night
             </button>
           </div>
 

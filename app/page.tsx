@@ -37,8 +37,8 @@ export default function Home() {
                 English (fluent), Japanese (intermediate), French (basic)
               </li>
               <li className="flex gap-2">
-                <span className="font-medium text-slate-900 dark:text-slate-100">Builder & Sharer:</span>
-                Self-motivated researcher who builds complete frameworks from scratch and shares knowledge through publications and open-source contributions
+                <span className="shrink-0 whitespace-nowrap font-medium text-slate-900 dark:text-slate-100">Builder & Sharer:</span>
+                <span>Self-motivated researcher who builds complete frameworks from scratch and shares knowledge through publications and open-source contributions</span>
               </li>
             </ul>
           </div>
@@ -80,6 +80,7 @@ export default function Home() {
                 title="Supervised vs SSL for Fin Whale Vocalization Detection"
                 venue="NeurIPS 2025 Workshop"
                 description="Co-authored first SSL study for fin whale detection. SincNet front-end increased AUROC from 0.868 to 0.914 and F1 from 0.784 to 0.856. Extended with wav2vec 2.0 and data2vec."
+                href="https://hal.science/hal-05493363v1/file/CHAREYRE_NeurIPS_2025_SSL_for_finwhale_paper.pdf"
               />
               <PublicationCard
                 title="Sem-DPO: Mitigating Semantic Inconsistency in Preference Optimization for Prompt Engineering"

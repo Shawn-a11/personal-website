@@ -55,7 +55,7 @@ npm start
 
 ## Customization
 
-- **Theme**: Toggle between Tech (深蓝科技风) and Academic (极简黑白学术风) in the sidebar
+- **Theme**: Toggle between Day (白天) and Night (黑夜) in the sidebar
 - **Avatar**: `public/avatar.png` — your profile photo (falls back to initials if missing)
 - **Resume**: `public/Resume.pdf` — download button in Contact section
 - **Social links**: Edit `components/Sidebar.tsx` — add your Google Scholar URL when profile is ready
