@@ -53,7 +53,7 @@ export default function Home() {
             <ProjectCard
               title="Fin Whale Vocalization Detection"
               description="First study applying Self-Supervised Learning (SSL) to fin whale detection. Built complete supervised baseline with lightweight Transformer encoder, data pipeline, and ablation studies across normalization schemes."
-              highlight="NeurIPS 2025 Workshop · AUROC 0.914"
+              highlight="NeurIPS 2025 Workshop"
             />
             <ProjectCard
               title="Sem-DPO: Semantic Alignment via DPO"
